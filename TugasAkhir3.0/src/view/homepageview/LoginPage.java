@@ -20,7 +20,7 @@ public class LoginPage {
             String password = inp.next();
             cekdata = sC.cekdataAkun(nama, password);
             System.out.println("\nSelamat datang " + sC.getData(cekdata).getNama() + "\n");
-            new DashboardPage().dashboard();
+            new DashboardPage().dashboard(nama);
         } catch (Exception e) {
             System.out.println("Nama atau password salah");
         }

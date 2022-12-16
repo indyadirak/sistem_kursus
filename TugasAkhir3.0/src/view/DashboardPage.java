@@ -15,7 +15,7 @@ public class DashboardPage {
     DaftarKelasPage daftarKelasPage = new DaftarKelasPage();
     LogOut log = new LogOut();
 
-    public void dashboard() {
+    public void dashboard(String nama) {
         int pil;
         do {
             System.out.println("""
@@ -24,7 +24,6 @@ public class DashboardPage {
                     2. daftar kelas
                     3. delete
                     0. Logout""");
-            System.out.print("pilih = ");
             pil = inp.nextInt();
             switch (pil) {
                 case 1:
@@ -34,7 +33,7 @@ public class DashboardPage {
                     daftarKelasPage.pilihKursus();
                     break;
                 case 3:
-                    deletePage.hapus();
+                    deletePage.hapus(nama);
                     break;
                 case 0:
                     log.logOutConfirm();
