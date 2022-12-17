@@ -20,6 +20,7 @@ public class DeletePage {
             System.out.print("Masukkan nama anda: ");
             nama = input.nextLine();
             new SiswaController().delete(nama);
+            System.out.println("Berhasil menghapus akun");
             new HomePage();
         } else if (pilihan == 'N' || pilihan == 'n') {
             new DashboardPage();
