@@ -12,7 +12,7 @@ public class DeletePage {
     char pilihan;
 
     public void hapus() {
-        String nama;
+        String nama, alamat, noTelpon, password;
         System.out.print("Ingin menghapus Data (Y/y atau N/n)? ");
         pilihan = input.next().charAt(0);
         input.nextLine();
@@ -20,11 +20,11 @@ public class DeletePage {
             System.out.print("Masukkan nama anda: ");
             nama = input.nextLine();
             new SiswaController().delete(nama);
-            new HomePage().home();
+            new HomePage();
         } else if (pilihan == 'N' || pilihan == 'n') {
-            new DashboardPage().dashboard();
+            new DashboardPage();
         } else {
-            new DeletePage().hapus();
+            new DeletePage();
         }
     }
 }
