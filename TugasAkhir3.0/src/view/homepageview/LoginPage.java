@@ -14,11 +14,11 @@ public class LoginPage {
     public void login() {
         int cekdata;
         try {
-            System.out.print("Masukkan nama          : ");
-            String nama = inp.next();
+            System.out.print("Masukkan NPM anda      : ");
+            String arrNpm = inp.nextLine();
             System.out.print("Masukkan password      : ");
             String password = inp.next();
-            cekdata = sC.cekdataAkun(nama, password);
+            cekdata = sC.cekdataAkun(arrNpm, password);
             System.out.println("\nSelamat datang " + sC.getData(cekdata).getNama() + "\n");
             new DashboardPage().dashboard();
         } catch (Exception e) {

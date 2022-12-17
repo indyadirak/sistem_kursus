@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Peserta;
+import model.ModelObject;
 import view.DashboardPage;
 import view.HomePage;
 
@@ -55,12 +56,20 @@ public class SiswaController {
         ModelObject.siswa.menghapus_account(nama);
     }
 
-    public static void logOut(char pilihan){
+    public void logOut(char pilihan){
         if (pilihan == 'y' || pilihan == 'Y'){
-            new HomePage();
+            new HomePage().home();
         }
         else if (pilihan == 'n' || pilihan == 'N'){
-            new DashboardPage();
+            new DashboardPage().dashboard();
+        }
+    }
+
+    public void exit(char pilihan) {
+        if (pilihan == 'y' || pilihan == 'Y') {
+            System.out.println("Terima Kasih Kunjungannya");
+        } else if (pilihan == 'n' || pilihan == 'N') {
+            new HomePage().home();
         }
     }
 }

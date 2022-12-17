@@ -18,8 +18,4 @@ public class KursusModel {
     public Kursus getListKursus(int index) {
         return listKursus.get(index);
     }
-
-    public void delete(int index) {
-        listKursus.remove(index);
-    }
 }

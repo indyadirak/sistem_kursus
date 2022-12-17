@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Kursus;
+import model.ModelObject;
 
 public class KursusController {
 

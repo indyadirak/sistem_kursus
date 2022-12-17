@@ -1,5 +1,6 @@
 package view;
 
+import view.homepageview.ExitPage;
 import view.homepageview.LoginPage;
 import view.homepageview.RegistrationPage;
 import view.homepageview.ShowPage;
@@ -32,6 +33,6 @@ public class HomePage {
                     break;
             }
         } while (pilih != 0);
-        System.out.println("Terima Kasih Kunjungannya");
+        new ExitPage().exit();
     }
 }
