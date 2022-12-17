@@ -12,7 +12,7 @@ public class DeletePage {
     char pilihan;
 
     public void hapus() {
-        String nama, alamat, noTelpon, password;
+        String nama;
         System.out.print("Ingin menghapus Data (Y/y atau N/n)? ");
         pilihan = input.next().charAt(0);
         input.nextLine();
