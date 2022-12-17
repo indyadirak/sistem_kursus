@@ -68,7 +68,8 @@ public class SiswaController {
     public void exit(char pilihan) {
         if (pilihan == 'y' || pilihan == 'Y') {
             System.out.println("Terima Kasih Kunjungannya");
-        } else if (pilihan == 'n' || pilihan == 'N') {
+        }
+        else if (pilihan == 'n' || pilihan == 'N') {
             new HomePage().home();
         }
     }
