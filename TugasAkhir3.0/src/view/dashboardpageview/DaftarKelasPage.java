@@ -28,12 +28,6 @@ public class DaftarKelasPage {
         System.out.print("pilih   : ");
         pilihKursus = input.nextInt();
         pilihKursus = pilihKursus - 1;
-        System.out.println("\n         BERHASIL DIBELI                 ");
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
-        System.out.println("Modul       : " + kursus.getData(pilihKursus).getModul());
-        System.out.println("Kelas       : " + kursus.getData(pilihKursus).getKelas());
-        System.out.println("jadwal      : " + kursus.getData(pilihKursus).getJadwal());
-        System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         sC.reg(nama, alamat, noTelp, password, kursus.getData(pilihKursus).getModul(), kursus.getData(pilihKursus).getKelas(), kursus.getData(pilihKursus).getJadwal());
     }
 }

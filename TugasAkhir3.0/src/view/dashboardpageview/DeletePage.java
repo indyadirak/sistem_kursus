@@ -28,6 +28,7 @@ public class DeletePage extends LoginPage{
             System.out.println("Berhasil menghapus akun");
             // new HomePage();
             // HomePage homePage = new HomePage();
+             new HomePage().home();
         } else if (pilihan == 'N' || pilihan == 'n') {
             new DashboardPage();
         } else {
