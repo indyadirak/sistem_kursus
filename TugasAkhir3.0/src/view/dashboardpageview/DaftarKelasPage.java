@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 import controller.KursusController;
 
+import static view.object.sC;
+
 public class DaftarKelasPage {
     static KursusController kursus = new KursusController();
     public int pilihKursus;
@@ -21,7 +23,7 @@ public class DaftarKelasPage {
         }
     }
 
-    public void pilihKursus() {
+    public void pilihKursus(String nama, String alamat, String noTelp, String password) {
         cetak();
         System.out.print("pilih   : ");
         pilihKursus = input.nextInt();
@@ -29,8 +31,9 @@ public class DaftarKelasPage {
         System.out.println("\n         BERHASIL DIBELI                 ");
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
         System.out.println("Modul       : " + kursus.getData(pilihKursus).getModul());
-        System.out.println("Kelas       : " + kursus.getData(pilihKursus).getJadwal());
+        System.out.println("Kelas       : " + kursus.getData(pilihKursus).getKelas());
         System.out.println("jadwal      : " + kursus.getData(pilihKursus).getJadwal());
         System.out.println("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+        sC.reg(nama, alamat, noTelp, password, kursus.getData(pilihKursus).getModul(), kursus.getData(pilihKursus).getKelas(), kursus.getData(pilihKursus).getJadwal());
     }
 }

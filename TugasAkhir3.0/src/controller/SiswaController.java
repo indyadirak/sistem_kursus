@@ -16,8 +16,8 @@ public class SiswaController {
         return ModelObject.siswa.getPeserta(index);
     }
 
-    public void reg(String nama, String alamat, String noTelp, String password) {
-        ModelObject.siswa.insert(new Peserta(nama, alamat, noTelp, password));
+    public void reg(String nama, String alamat, String noTelp, String password, String mdl, String jdwl, String kls) {
+        ModelObject.siswa.insert(new Peserta(nama, alamat, noTelp, password, mdl, jdwl, kls));
     }
 
     public int cekdataAkun(String nama, String password) {

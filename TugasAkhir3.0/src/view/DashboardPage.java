@@ -21,8 +21,7 @@ public class DashboardPage {
             System.out.println("""
                     Menu
                     1. update
-                    2. daftar kelas
-                    3. delete
+                    2. delete
                     0. Logout""");
             pil = inp.nextInt();
             switch (pil) {
@@ -30,9 +29,6 @@ public class DashboardPage {
                     updatepage.menu_update();
                     break;
                 case 2:
-                    daftarKelasPage.pilihKursus();
-                    break;
-                case 3:
                     deletePage.hapus();
                     break;
                 case 0:
