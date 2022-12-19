@@ -3,10 +3,14 @@ package view.dashboardpageview;
 import controller.SiswaController;
 import view.DashboardPage;
 import view.HomePage;
+import view.homepageview.LoginPage;
 
+import java.text.BreakIterator;
 import java.util.Scanner;
 
-public class DeletePage {
+public class DeletePage extends LoginPage{
+
+    SiswaController sC = new SiswaController();
 
     Scanner input = new Scanner(System.in);
     char pilihan;
@@ -17,11 +21,13 @@ public class DeletePage {
         pilihan = input.next().charAt(0);
         input.nextLine();
         if (pilihan == 'Y' || pilihan == 'y') {
-            System.out.print("Masukkan nama anda: ");
-            nama = input.nextLine();
-            new SiswaController().delete(nama);
+            // System.out.print("Masukkan nama anda: ");
+            // nama = input.nextLine();
+            // new SiswaController().delete(nama);
+            new SiswaController().delete(sC.getData(cekdata).getNama());
             System.out.println("Berhasil menghapus akun");
-            new HomePage();
+            // new HomePage();
+            // HomePage homePage = new HomePage();
         } else if (pilihan == 'N' || pilihan == 'n') {
             new DashboardPage();
         } else {
