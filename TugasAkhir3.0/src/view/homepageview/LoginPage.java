@@ -16,7 +16,7 @@ public class LoginPage {
         
         try {
             System.out.print("Masukkan NPM anda      : ");
-            String arrNpm = inp.nextLine();
+            String arrNpm = inp.next();
             System.out.print("Masukkan password      : ");
             String password = inp.next();
             cekdata = sC.cekdataAkun(arrNpm, password); // Login Problem, Credential is not working

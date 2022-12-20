@@ -31,44 +31,27 @@ public class Siswa {
         return listSiswa.get(index);
     }
 
-    public void merubah_nama(String nama_lama, String nama_baru) {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++) {
-            if (listSiswa.get(perulangan).getNama().equals(nama_lama)) {
-                listSiswa.get(perulangan).setNama(nama_baru);
-            }
-        }
+    public void merubah_nama(int index,String nama_baru) {
+
+        listSiswa.get(index).setNama(nama_baru);
     }
 
-    public void merubah_alamat(String nama, String alamat_baru) {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++) {
-            if (listSiswa.get(perulangan).getNama().equals(nama)) {
-                listSiswa.get(perulangan).setAlamat(alamat_baru);
-            }
-        }
+    public void merubah_alamat(int index, String alamat_baru)
+    {
+        listSiswa.get(index).setAlamat(alamat_baru);
     }
 
-    public void merubah_nomor_telepon(String nama, String nomor_telepon_baru) {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++) {
-            if (listSiswa.get(perulangan).getNama().equals(nama)) {
-                listSiswa.get(perulangan).setNoTelpon(nomor_telepon_baru);
-            }
-        }
+    public void merubah_nomor_telepon(int index, String nomor_telepon_baru)
+    {
+        listSiswa.get(index).setNoTelpon(nomor_telepon_baru);
     }
 
-    public void merubah_password(String nama, String password_baru) {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++) {
-            if (listSiswa.get(perulangan).getNama().equals(nama)) {
-                listSiswa.get(perulangan).setPass(password_baru);
-            }
-        }
+    public void merubah_password(int index, String password_baru) {
+        listSiswa.get(index).setPass(password_baru);
     }
 
-    public void menghapus_account(String nama) {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++) {
-            if (listSiswa.get(perulangan).getNama().equals(nama)) {
-                listSiswa.remove(perulangan);
-            }
-        }
+    public void menghapus_account(int index) {
+        listSiswa.remove(index);
     }
 
 }

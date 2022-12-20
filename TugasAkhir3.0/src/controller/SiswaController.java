@@ -36,24 +36,57 @@ public class SiswaController {
         return arrNpm.get(index);
     }
 
-    public void merubah_nama(String nama_lama, String nama_baru) {
-        ModelObject.siswa.merubah_nama(nama_lama, nama_baru);
+    public void merubah_nama(String nama_lama, String nama_baru)
+    {
+        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++)
+        {
+            if (listSiswa.get(perulangan).getNama().equals(nama_lama))
+            {
+                ModelObject.siswa.merubah_nama(perulangan, nama_baru);
+            }
+        }
     }
 
     public void merubah_alamat(String alamat_lama, String alamat_baru) {
-        ModelObject.siswa.merubah_alamat(alamat_lama, alamat_baru);
+        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++)
+        {
+            if (listSiswa.get(perulangan).getAlamat().equals(alamat_lama))
+            {
+                ModelObject.siswa.merubah_alamat(perulangan, alamat_baru);
+            }
+        }
+
     }
 
     public void merubah_nomor_telepon(String nomor_telepon_lama, String nomor_telepon_baru) {
-        ModelObject.siswa.merubah_nomor_telepon(nomor_telepon_lama, nomor_telepon_baru);
+        for (int perulangan = 0 ; perulangan < listSiswa.size(); perulangan++)
+        {
+            if (listSiswa.get(perulangan).getNoTelpon().equals(nomor_telepon_lama))
+            {
+                ModelObject.siswa.merubah_nomor_telepon(perulangan, nomor_telepon_baru);
+            }
+        }
     }
 
     public void merubah_password(String password_lama, String password_baru) {
-        ModelObject.siswa.merubah_password(password_lama, password_baru);
+        for (int perulangan = 0 ; perulangan < listSiswa.size(); perulangan++)
+        {
+            if (listSiswa.get(perulangan).getPass().equals(password_lama))
+            {
+                ModelObject.siswa.merubah_password(perulangan, password_baru);
+            }
+        }
     }
 
-    public void delete(String nama) {
-        ModelObject.siswa.menghapus_account(nama);
+    public void delete(String nama)
+    {
+        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++)
+        {
+            if (listSiswa.get(perulangan).getNama().equals(nama))
+            {
+                ModelObject.siswa.menghapus_account(perulangan);
+            }
+        }
     }
 
     public void logOut(char pilihan){
