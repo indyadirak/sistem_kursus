@@ -23,6 +23,10 @@ public class Siswa {
         return loop;
     }
 
+    public int jumlah_data_array_peserta()
+    {
+        return listSiswa.size();
+    }
     public int getArrayList() {
         return listSiswa.size();
     }

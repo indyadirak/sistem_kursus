@@ -38,9 +38,9 @@ public class SiswaController {
 
     public void merubah_nama(String nama_lama, String nama_baru)
     {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++)
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta() ; perulangan++)
         {
-            if (listSiswa.get(perulangan).getNama().equals(nama_lama))
+            if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama_lama))
             {
                 ModelObject.siswa.merubah_nama(perulangan, nama_baru);
             }
@@ -48,9 +48,9 @@ public class SiswaController {
     }
 
     public void merubah_alamat(String alamat_lama, String alamat_baru) {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++)
+        for (int perulangan = 0; perulangan <  ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
         {
-            if (listSiswa.get(perulangan).getAlamat().equals(alamat_lama))
+            if (ModelObject.siswa.getPeserta(perulangan).getAlamat().equals(alamat_lama))
             {
                 ModelObject.siswa.merubah_alamat(perulangan, alamat_baru);
             }
@@ -59,9 +59,9 @@ public class SiswaController {
     }
 
     public void merubah_nomor_telepon(String nomor_telepon_lama, String nomor_telepon_baru) {
-        for (int perulangan = 0 ; perulangan < listSiswa.size(); perulangan++)
+        for (int perulangan = 0 ; perulangan <  ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
         {
-            if (listSiswa.get(perulangan).getNoTelpon().equals(nomor_telepon_lama))
+            if (ModelObject.siswa.getPeserta(perulangan).getNoTelpon().equals(nomor_telepon_lama))
             {
                 ModelObject.siswa.merubah_nomor_telepon(perulangan, nomor_telepon_baru);
             }
@@ -69,9 +69,9 @@ public class SiswaController {
     }
 
     public void merubah_password(String password_lama, String password_baru) {
-        for (int perulangan = 0 ; perulangan < listSiswa.size(); perulangan++)
+        for (int perulangan = 0 ; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
         {
-            if (listSiswa.get(perulangan).getPass().equals(password_lama))
+            if (ModelObject.siswa.getPeserta(perulangan).getPass().equals(password_lama))
             {
                 ModelObject.siswa.merubah_password(perulangan, password_baru);
             }
@@ -80,9 +80,9 @@ public class SiswaController {
 
     public void delete(String nama)
     {
-        for (int perulangan = 0; perulangan < listSiswa.size(); perulangan++)
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
         {
-            if (listSiswa.get(perulangan).getNama().equals(nama))
+            if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama))
             {
                 ModelObject.siswa.menghapus_account(perulangan);
             }
