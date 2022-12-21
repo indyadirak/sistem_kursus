@@ -33,25 +33,21 @@ public class UpdatePage
             case 1:
             {
                 new UpdateNama().perubahan_nama();
-                new LoginPage().login();
                 break;
             }
             case 2:
             {
                 new UpdateAlamat().perubahan_alamat();
-                new LoginPage().login();
                 break;
             }
             case 3:
             {
                 new UpdateNoTelpon().perubahan_nomor_telepon();
-                new LoginPage().login();
                 break;
             }
             case 4:
             {
                 new UpdatePassword().perubahan_password();
-                new LoginPage().login();
                 break;
             }
             default:

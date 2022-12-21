@@ -27,9 +27,11 @@ public class DashboardPage {
             switch (pil) {
                 case 1:
                     updatepage.menu_update();
+                    new HomePage().home();
                     break;
                 case 2:
                     deletePage.hapus();
+                    new HomePage().home();
                     break;
                 case 0:
                     log.logOutConfirm();
