@@ -5,9 +5,10 @@ import controller.SiswaController;
 import java.util.Scanner;
 
 public class ExitPage {
+    Scanner input = new Scanner(System.in);
 
-    public void exit(){
-        Scanner input = new Scanner(System.in);
+    public void exit() {
+
         char pilihan;
         System.out.println("Apakah anda benar - benar ingin keluar dari aplikasi?");
         System.out.print("Y/y atau N/n: ");

@@ -16,12 +16,16 @@ public class SiswaController {
         return ModelObject.siswa.getPeserta(index);
     }
 
+    public String getArrNpm(int index) {
+        return ModelObject.siswa.getNpm(index);
+    }
+
     public void reg(String nama, String alamat, String noTelp, String password, String mdl, String jdwl, String kls) {
         ModelObject.siswa.insert(new Peserta(nama, alamat, noTelp, password, mdl, jdwl, kls));
     }
 
-    public int cekdataAkun(String nama, String password) {
-        int cekdata = ModelObject.siswa.cekLogin(nama, password);
+    public int cekdataAkun(String npm, String password) {
+        int cekdata = ModelObject.siswa.Login(npm, password);
         return cekdata;
     }
 
@@ -36,22 +40,17 @@ public class SiswaController {
         return arrNpm.get(index);
     }
 
-    public void merubah_nama(String nama_lama, String nama_baru)
-    {
-        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta() ; perulangan++)
-        {
-            if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama_lama))
-            {
+    public void merubah_nama(String nama_lama, String nama_baru) {
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++) {
+            if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama_lama)) {
                 ModelObject.siswa.merubah_nama(perulangan, nama_baru);
             }
         }
     }
 
     public void merubah_alamat(String alamat_lama, String alamat_baru) {
-        for (int perulangan = 0; perulangan <  ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
-        {
-            if (ModelObject.siswa.getPeserta(perulangan).getAlamat().equals(alamat_lama))
-            {
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++) {
+            if (ModelObject.siswa.getPeserta(perulangan).getAlamat().equals(alamat_lama)) {
                 ModelObject.siswa.merubah_alamat(perulangan, alamat_baru);
             }
         }
@@ -59,41 +58,33 @@ public class SiswaController {
     }
 
     public void merubah_nomor_telepon(String nomor_telepon_lama, String nomor_telepon_baru) {
-        for (int perulangan = 0 ; perulangan <  ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
-        {
-            if (ModelObject.siswa.getPeserta(perulangan).getNoTelpon().equals(nomor_telepon_lama))
-            {
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++) {
+            if (ModelObject.siswa.getPeserta(perulangan).getNoTelpon().equals(nomor_telepon_lama)) {
                 ModelObject.siswa.merubah_nomor_telepon(perulangan, nomor_telepon_baru);
             }
         }
     }
 
     public void merubah_password(String password_lama, String password_baru) {
-        for (int perulangan = 0 ; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
-        {
-            if (ModelObject.siswa.getPeserta(perulangan).getPass().equals(password_lama))
-            {
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++) {
+            if (ModelObject.siswa.getPeserta(perulangan).getPass().equals(password_lama)) {
                 ModelObject.siswa.merubah_password(perulangan, password_baru);
             }
         }
     }
 
-    public void delete(String nama)
-    {
-        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++)
-        {
-            if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama))
-            {
+    public void delete(String nama) {
+        for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++) {
+            if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama)) {
                 ModelObject.siswa.menghapus_account(perulangan);
             }
         }
     }
 
-    public void logOut(char pilihan){
-        if (pilihan == 'y' || pilihan == 'Y'){
+    public void logOut(char pilihan) {
+        if (pilihan == 'y' || pilihan == 'Y') {
             new HomePage().home();
-        }
-        else if (pilihan == 'n' || pilihan == 'N'){
+        } else if (pilihan == 'n' || pilihan == 'N') {
             new DashboardPage().dashboard();
         }
     }
@@ -101,8 +92,7 @@ public class SiswaController {
     public void exit(char pilihan) {
         if (pilihan == 'y' || pilihan == 'Y') {
             System.out.println("Terima Kasih Kunjungannya");
-        }
-        else if (pilihan == 'n' || pilihan == 'N') {
+        } else if (pilihan == 'n' || pilihan == 'N') {
             new HomePage().home();
         }
     }

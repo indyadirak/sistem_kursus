@@ -5,10 +5,9 @@ import view.DashboardPage;
 import view.HomePage;
 import view.homepageview.LoginPage;
 
-import java.text.BreakIterator;
 import java.util.Scanner;
 
-public class DeletePage extends LoginPage{
+public class DeletePage extends LoginPage {
 
     SiswaController sC = new SiswaController();
 
@@ -16,7 +15,6 @@ public class DeletePage extends LoginPage{
     char pilihan;
 
     public void hapus() {
-        String nama;
         System.out.print("Ingin menghapus Data (Y/y atau N/n)? ");
         pilihan = input.next().charAt(0);
         input.nextLine();
@@ -28,7 +26,7 @@ public class DeletePage extends LoginPage{
             System.out.println("Berhasil menghapus akun");
             // new HomePage();
             // HomePage homePage = new HomePage();
-             new HomePage().home();
+            new HomePage().home();
         } else if (pilihan == 'N' || pilihan == 'n') {
             new DashboardPage();
         } else {
