@@ -26,9 +26,9 @@ public class Siswa {
         for (int i = 0; i < getArrNpm(); i++) {
             for (int j = 0; j < getArrayList(); j++) {
                 if (npm.equals(arrNpm.get(i)) && password.equals(listSiswa.get(j).getPass())) {
-                    cek = 0;
+                    cek = j;
                 } else {
-                    cek = 1;
+                    cek = 0;
                 }
             }
         }
@@ -38,9 +38,9 @@ public class Siswa {
     public int Login(String npm, String pasword) {
         int cekLogin = cekLogin(npm, pasword);
         if (cekLogin == 0) {
-            System.out.println("login");
-        } else {
             System.out.println("tidack");
+        } else {
+            System.out.println("ini bisa");
         }
         return cekLogin;
     }

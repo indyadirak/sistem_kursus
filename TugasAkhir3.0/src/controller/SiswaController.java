@@ -33,13 +33,6 @@ public class SiswaController {
         return ModelObject.siswa.getArrayList();
     }
 
-    public String npmAuto(int index) {
-        for (index = 0; index < listSiswa.size(); index++) {
-            arrNpm.add("062025" + (index + 1));
-        }
-        return arrNpm.get(index);
-    }
-
     public void merubah_nama(String nama_lama, String nama_baru) {
         for (int perulangan = 0; perulangan < ModelObject.siswa.jumlah_data_array_peserta(); perulangan++) {
             if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama_lama)) {

@@ -13,13 +13,16 @@ public class LoginPage {
     public int cekdata;
 
     public void login() {
-        
+
         try {
-            System.out.print("Masukkan NPM anda      : ");
-            String arrNpm = inp.next();
-            System.out.print("Masukkan password      : ");
-            String password = inp.next();
-            cekdata = sC.cekdataAkun(arrNpm, password); // Login Problem, Credential is not working
+            do {
+                System.out.print("Masukkan NPM anda      : ");
+                String arrNpm = inp.next();
+                System.out.print("Masukkan password      : ");
+                String password = inp.next();
+                cekdata = sC.cekdataAkun(arrNpm, password);
+            } while (cekdata == 0);
+            // Login Problem, Credential is not working
             System.out.println("Debug test : " + cekdata);
             System.out.println("\nSelamat datang " + sC.getData(cekdata).getNama() + "\n");
             new DashboardPage().dashboard();
