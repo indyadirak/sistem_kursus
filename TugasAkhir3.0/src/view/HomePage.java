@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 public class HomePage {
     Scanner inp = new Scanner(System.in);
-    int loop = -1;
+//    int loop = -1;
     int pilih;
 
     public void home(){
@@ -21,18 +21,27 @@ public class HomePage {
                     0. Exit""");
             System.out.print("pilih = ");
             pilih = inp.nextInt();
-            switch (pilih){
-                case 1:
-                    new RegistrationPage().reg();
-                    break;
-                case 2:
-                    new ShowPage().show();
-                    break;
-                case 3:
-                    new LoginPage().login();
-                    break;
-            }
+            menu(pilih);
         } while (pilih != 0);
-        new ExitPage().exit();
+    }
+
+    private void menu(int pilih){
+        switch (pilih){
+            case 1:
+                new RegistrationPage().reg();
+                break;
+            case 2:
+                new ShowPage().show();
+                break;
+            case 3:
+                new LoginPage().login();
+                break;
+            case 0:
+                new ExitPage().exit();
+                break;
+            default:
+                System.out.println("Menu tidak valid");
+                break;
+        }
     }
 }

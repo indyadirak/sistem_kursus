@@ -20,7 +20,7 @@ public class SiswaController {
     }
 
     public void reg(String nama, String alamat, String noTelp, String password, String mdl, String jdwl, String kls) {
-        int npm = 0;
+//        int npm = 0;
         ModelObject.siswa.insert(new Peserta(nama, alamat, noTelp, password, mdl, jdwl, kls, ModelObject.siswa.jumlah_data_array_peserta()+1));
     }
 
@@ -95,22 +95,6 @@ public class SiswaController {
             if (ModelObject.siswa.getPeserta(perulangan).getNama().equals(nama)) {
                 ModelObject.siswa.menghapus_account(perulangan);
             }
-        }
-    }
-
-    public void logOut(char pilihan) {
-        if (pilihan == 'y' || pilihan == 'Y') {
-            new HomePage().home();
-        } else if (pilihan == 'n' || pilihan == 'N') {
-            new DashboardPage().dashboard();
-        }
-    }
-
-    public void exit(char pilihan) {
-        if (pilihan == 'y' || pilihan == 'Y') {
-            System.out.println("Terima Kasih Kunjungannya");
-        } else if (pilihan == 'n' || pilihan == 'N') {
-            new HomePage().home();
         }
     }
 }

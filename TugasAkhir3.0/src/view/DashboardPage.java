@@ -2,7 +2,7 @@ package view;
 
 import view.dashboardpageview.DaftarKelasPage;
 import view.dashboardpageview.DeletePage;
-import view.dashboardpageview.LogOut;
+import view.dashboardpageview.LogOutPage;
 import view.dashboardpageview.UpdatePage;
 
 import java.util.Scanner;
@@ -13,7 +13,7 @@ public class DashboardPage {
     UpdatePage updatepage = new UpdatePage();
     DeletePage deletePage = new DeletePage();
     DaftarKelasPage daftarKelasPage = new DaftarKelasPage();
-    LogOut log = new LogOut();
+    LogOutPage log = new LogOutPage();
 
     public void dashboard() {
         int pil;
@@ -24,18 +24,22 @@ public class DashboardPage {
                     2. delete
                     0. Logout""");
             pil = inp.nextInt();
-            switch (pil) {
-                case 1:
-                    updatepage.menu_update();
-                    new HomePage().home();
-                    break;
-                case 2:
-                    deletePage.hapus();
-                    new HomePage().home();
-                    break;
-                case 0:
-                    log.logOutConfirm();
-            }
+            menu(pil);
         } while (pil != 0);
+    }
+
+    private void menu(int pil){
+        switch (pil) {
+            case 1:
+                updatepage.menu_update();
+                new HomePage().home();
+                break;
+            case 2:
+                deletePage.hapus();
+                new HomePage().home();
+                break;
+            case 0:
+                log.logOutConfirm();
+        }
     }
 }
