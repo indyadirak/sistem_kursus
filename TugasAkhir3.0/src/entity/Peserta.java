@@ -1,15 +1,26 @@
 package entity;
 
 public class Peserta extends Member {
-    private String alamat, noTelpon, mdl, jdwl, kls, npm;
+    private String alamat, noTelpon, mdl, jdwl, kls;
+    private int npm;
 
-    public Peserta(String nama, String alamat, String noTelpon, String password, String mdl, String jdwl, String kls) {
+
+    public Peserta(String nama, String alamat, String noTelpon, String password, String mdl, String jdwl, String kls, int npm) {
         super(nama, password);
         this.alamat = alamat;
         this.noTelpon = noTelpon;
         this.mdl = mdl;
         this.jdwl = jdwl;
         this.kls = kls;
+        this.npm = npm;
+    }
+
+    public int getNpm() {
+        return npm;
+    }
+
+    public void setNpm(int npm) {
+        this.npm = npm;
     }
 
     public String getAlamat() {
@@ -20,13 +31,10 @@ public class Peserta extends Member {
         return noTelpon;
     }
 
-    public String getNpm() {
-        return npm;
-    }
-
     public void setAlamat(String alamat) {
         this.alamat = alamat;
     }
+
 
     public void setNoTelpon(String noTelpon) {
         this.noTelpon = noTelpon;
