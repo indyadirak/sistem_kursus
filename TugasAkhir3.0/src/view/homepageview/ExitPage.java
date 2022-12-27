@@ -16,6 +16,7 @@ public class ExitPage {
         if (pilihan == 'Y' || pilihan == 'y') {
             System.out.println("=========================");
             System.out.println("Terima Kasih Kunjungannya");
+            System.exit(0);
         }
         else if (pilihan == 'N' || pilihan == 'n') {
             new HomePage().home();

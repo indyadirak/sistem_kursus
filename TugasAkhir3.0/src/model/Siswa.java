@@ -3,6 +3,7 @@ package model;
 import java.util.ArrayList;
 
 import entity.*;
+import org.junit.Test;
 
 public class Siswa {
     public ArrayList<Peserta> listSiswa;
@@ -21,6 +22,7 @@ public class Siswa {
         return arrNpm.get(index);
     }
 
+    @Test
     public int cekLogin(String npm, String password) {
         int cek = 0;
         for (int i = 0; i < getArrNpm(); i++) {
