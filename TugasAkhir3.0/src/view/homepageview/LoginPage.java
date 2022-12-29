@@ -9,8 +9,7 @@ import java.util.Scanner;
 public class LoginPage {
     SiswaController sC = new SiswaController();
     Scanner inp = new Scanner(System.in);
-    public ArrayList<String> arrNpm = new ArrayList<>();
-    public int cekdata;
+
 
     public void login()
     {
@@ -44,5 +43,9 @@ public class LoginPage {
         sC.proses_login(arrNpm,password);
     }
 
-
+    public void loginGagal(){
+        System.out.println("-------------------------------");
+        System.out.println("----------LOGIN GAGAL----------");
+        System.out.println("-------------------------------");
+    }
 }

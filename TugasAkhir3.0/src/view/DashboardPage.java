@@ -3,14 +3,13 @@ package view;
 import view.dashboardpageview.DaftarKelasPage;
 import view.dashboardpageview.DeletePage;
 import view.dashboardpageview.LogOutPage;
-import view.dashboardpageview.UpdatePage;
+import view.dashboardpageview.updatepageview.UpdateData;
 
 import java.util.Scanner;
 
 public class DashboardPage {
     Scanner inp = new Scanner(System.in);
 
-    UpdatePage updatepage = new UpdatePage();
     DeletePage deletePage = new DeletePage();
     DaftarKelasPage daftarKelasPage = new DaftarKelasPage();
     LogOutPage log = new LogOutPage();
@@ -31,7 +30,7 @@ public class DashboardPage {
     private void menu(int pil){
         switch (pil) {
             case 1:
-                updatepage.menu_update();
+                new UpdateData().perubahan_data_pribadi();
                 new HomePage().home();
                 break;
             case 2:

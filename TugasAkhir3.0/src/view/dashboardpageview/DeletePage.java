@@ -14,6 +14,7 @@ public class DeletePage extends LoginPage {
     Scanner input = new Scanner(System.in);
     char pilihan;
 
+    //delete untuk admin
     public void hapus() {
         System.out.print("Ingin menghapus Data (Y/y atau N/n)? ");
         pilihan = input.next().charAt(0);
@@ -22,7 +23,7 @@ public class DeletePage extends LoginPage {
             // System.out.print("Masukkan nama anda: ");
             // nama = input.nextLine();
             // new SiswaController().delete(nama);
-            new SiswaController().delete(sC.getData(cekdata).getNama());
+/*            new SiswaController().delete(sC.getData(cekdata).getNama());*/
             System.out.println("Berhasil menghapus akun");
             // new HomePage();
             // HomePage homePage = new HomePage();

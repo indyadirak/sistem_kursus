@@ -1,3 +1,4 @@
+/*
 package view.dashboardpageview.updatepageview;
 
 import controller.SiswaController;
@@ -18,3 +19,4 @@ public class UpdatePassword{
         siswacontroller.merubah_password(password_lama, password_baru);
     }
 }
+*/

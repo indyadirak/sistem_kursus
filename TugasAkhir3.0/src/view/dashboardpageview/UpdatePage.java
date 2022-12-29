@@ -1,9 +1,7 @@
+/*
 package view.dashboardpageview;
 
-import view.dashboardpageview.updatepageview.UpdateAlamat;
-import view.dashboardpageview.updatepageview.UpdateNama;
-import view.dashboardpageview.updatepageview.UpdateNoTelpon;
-import view.dashboardpageview.updatepageview.UpdatePassword;
+
 
 import java.util.Scanner;
 
@@ -50,3 +48,4 @@ public class UpdatePage {
 
     }
 }
+*/

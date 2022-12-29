@@ -1,3 +1,4 @@
+/*
 package view.dashboardpageview.updatepageview;
 
 import controller.SiswaController;
@@ -18,3 +19,4 @@ public class UpdateNoTelpon {
         siswacontroller.merubah_nomor_telepon(nomor_telepon_lama, nomor_telepon_baru);
     }
 }
+*/

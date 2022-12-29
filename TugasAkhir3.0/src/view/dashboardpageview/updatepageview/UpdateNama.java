@@ -1,3 +1,4 @@
+/*
 package view.dashboardpageview.updatepageview;
 
 import controller.SiswaController;
@@ -19,3 +20,4 @@ public class UpdateNama {
         siswacontroller.merubah_nama(nama_lama,nama_baru);
     }
 }
+*/

@@ -1,9 +1,11 @@
 package view.homepageview;
 
+import model.ModelObject;
+
 public class ShowPage extends LoginPage {
 
     public void show() {
-        for (int i = 0; i < sC.getArrayList(); i++) {
+        for (int i = 0; i < ModelObject.siswa.listSiswa.size(); i++) {
             System.out.println("[" + (i + 1) + "]");
             System.out.println("===============================");
             System.out.println("nama        : " + sC.getData(i).getNama());
