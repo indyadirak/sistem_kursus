@@ -14,9 +14,7 @@ public class ExitPage {
         System.out.print("Y/y atau N/n: ");
         pilihan = input.next().charAt(0);
         if (pilihan == 'Y' || pilihan == 'y') {
-            System.out.println("=========================");
-            System.out.println("Terima Kasih Kunjungannya");
-            System.exit(0);
+            new HomePage().homeAdmin();
         }
         else if (pilihan == 'N' || pilihan == 'n') {
             new HomePage().home();

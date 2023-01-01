@@ -3,7 +3,6 @@ package model;
 import java.util.ArrayList;
 
 import entity.*;
-import org.junit.Test;
 
 public class Siswa {
     public ArrayList<Peserta> listSiswa;

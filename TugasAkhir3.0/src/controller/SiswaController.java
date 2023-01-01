@@ -3,11 +3,9 @@ package controller;
 
 import entity.Peserta;
 import model.ModelObject;
-import org.junit.Test;
 import view.DashboardPage;
 import view.HomePage;
 import view.homepageview.LoginPage;
-
 import java.util.ArrayList;
 
 public class SiswaController {

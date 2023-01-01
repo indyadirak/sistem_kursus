@@ -1,9 +1,6 @@
 package view;
 
-import view.homepageview.ExitPage;
-import view.homepageview.LoginPage;
-import view.homepageview.RegistrationPage;
-import view.homepageview.ShowPage;
+import view.homepageview.*;
 
 import java.util.Scanner;
 
@@ -11,8 +8,32 @@ public class HomePage {
     Scanner inp = new Scanner(System.in);
 //    int loop = -1;
     int pilih;
+    int pilihAdmin;
+
+    public void homeAdmin(){
+        do{
+            System.out.println("login sebagai : ");
+            System.out.println("1. admin");
+            System.out.println("2. user");
+            System.out.println("0. exit");
+            System.out.print("pilih : ");
+            pilihAdmin = inp.nextInt();
+            switch (pilihAdmin){
+                case 1:
+                    new LoginAdmin().loginAdmin();
+                    break;
+                case 2:
+                    home();
+                    break;
+            }
+        }while (pilihAdmin!=0);
+        System.out.println("=========================");
+        System.out.println("Terima Kasih Kunjungannya");
+        System.exit(0);
+    }
 
     public void home(){
+
         do{
             System.out.println("""
                     1. Daftar

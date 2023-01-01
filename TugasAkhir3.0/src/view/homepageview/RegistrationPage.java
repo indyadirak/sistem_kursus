@@ -1,7 +1,6 @@
 package view.homepageview;
 
 import controller.SiswaController;
-import org.junit.Test;
 import view.dashboardpageview.DaftarKelasPage;
 
 import java.util.Scanner;
@@ -9,7 +8,7 @@ import java.util.Scanner;
 public class RegistrationPage {
     SiswaController sC = new SiswaController();
     Scanner inp = new Scanner(System.in);
-    @Test
+
     public void reg() {
 
         try {

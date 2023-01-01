@@ -16,6 +16,5 @@ public class ShowPage extends LoginPage {
             System.out.println("Kelas       : " + sC.getData(i).getKls());
             System.out.println("jadwal      : " + sC.getData(i).getJdwl());
         }
-
     }
 }
